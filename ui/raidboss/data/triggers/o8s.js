@@ -16,7 +16,7 @@
       regexFr: / 14:28DB:Statue Divine starts using Onde De Choc/,
       regexJa: / 14:28DB:神々の像 starts using 衝撃波/,
       delaySeconds: 5,
-      alertText: {
+       alertText: {
         en: 'Look for Knockback',
         fr: 'Se préparer à la projection',
         de: 'Auf Rückstoß achten',
@@ -34,7 +34,7 @@
       regexFr: /Statue Divine starts using Volonté Indolente/,
       regexJa: /神々の像 starts using 惰眠の神気/,
       alertText: {
-        en: 'Look Away From Statue',
+        en: "Look Away From Statue",
         fr: 'Ne pas regarder la statue',
         de: 'Von Statue wegschauen',
       },
