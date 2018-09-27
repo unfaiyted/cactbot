@@ -1,0 +1,164 @@
+﻿<html>
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+
+  <!-- OverlayPlugin widget resize handle -->
+  <!--<link rel="stylesheet" href="../../resources/defaults.css">-->
+  <link rel="stylesheet" href="../../resources/resize_handle.css">
+    <link rel="stylesheet" href="settings.css">
+
+  <script src="../../resources/resize_handle.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+  <script>
+    document.addEventListener("onZoneChangedEvent", function (e) {
+      document.getElementById("currentZone").innerText = "currentZone: " + e.detail.zoneName;
+    });
+
+    document.addEventListener("onInCombatChangedEvent", function (e) {
+      document.getElementById("inCombat").innerText = "inCombat: act: " + (e.detail.inACTCombat ? "yes" : "no") + " game: " + (e.detail.inGameCombat ? "yes" : "no");
+    });
+    </script>
+
+</head>
+<body>
+<div id="cactbot-module">
+    <header>
+        <div>
+            <h3> Cactbot Settings Module </h3>
+            <div class="menu">
+                <span>raidboss</span>
+                <span>oopsyraid</span>
+                <span>jobs</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="raidboss" class="active">
+        <h1>RaidBoss</h1>
+        <h2>Timeline</h2>
+        <div id="timeline">
+            <label for="timeline-enabled">Enable Timeline</label>
+            <input type="checkbox" id="timeline-enabled" class="check"/>
+
+            <label for="show-timer-bar-at-seconds">Show timer bars at seconds </label>
+            <input type="number" min="0" max="100" id="show-timer-bar-at-seconds"/>
+
+            <label for="show-timer-bar-at-seconds">Keep expired bar:</label>
+            <input type="number" min="0" max="10" id="keep-expired-timer-bars-for-seconds"/>
+
+            <label for="bar-expires-seconds-soon">Keep expired bar:</label>
+            <input type="number" min="0" max="20" id="bar-expires-seconds-soon"/>
+
+            <label for="max-number-of-timer-bars">Keep expired bar:</label>
+            <input type="number" min="1" max="15" id="max-number-of-timer-bars"/>
+        </div>
+        <h2>Alerts</h2>
+        <div id="alerts">
+            <div>
+                <label for="alerts-enabled">All Alerts (Text + Sound)</label>
+                <input type="checkbox" id="alerts-enabled" class="check"/>
+            </div>
+            <div>
+                <label for="text-alerts-enabled">Text Alerts </label>
+                <input type="checkbox" id="text-alerts-enabled" class="check"/>
+            </div>
+            <div>
+                <label for="sound-alerts-enabled">Sound Alerts </label>
+                <input type="checkbox" id="sound-alerts-enabled" class="check"/>
+            </div>
+            <div>
+                <label for="spoken-alerts-enabled">Spoken Alerts </label>
+                <input type="checkbox" id="spoken-alerts-enabled" class="check"/>
+            </div>
+            <div>
+                <label for="group-alerts-enabled">Group Spoken Alerts </label>
+                <input type="checkbox" id="group-alerts-enabled" class="check"/>
+            </div>
+        </div>
+        <h2>Sounds and Volumes</h2>
+        <div id="alerts-sounds">
+            <div class="sound-type">
+                <div>
+                    <label for="info-sound">Info Sound </label>
+                    <input type="text" id="info-sound"/>
+                </div>
+
+                <div id="info-volume" class="player-volume" >
+                    <i class="fa fa-volume-down"></i>
+                    <div class="volume"></div>
+                    <i class="fa fa-volume-up"></i>
+                    <div class="volume-val">0%</div>
+                </div>
+            </div>
+
+            <div class="sound-type">
+
+                <div>
+                    <label for="alert-sound">Alert Sound </label>
+                    <input type="text" id="alert-sound" value="../../resources/sounds/BigWigs/Alert.ogg"/>
+                </div>
+
+                <div id="alert-volume" class="player-volume">
+                    <i class="fa fa-volume-down"></i>
+                    <div class="volume"></div>
+                    <i class="fa fa-volume-up"></i>
+                    <div class="volume-val">0%</div>
+                </div>
+            </div>
+
+            <div class="sound-type">
+                <div>
+                    <label for="alarm-sound">Alarm Sound </label>
+                    <input type="text" id="alarm-sound"/>
+                </div>
+
+                <div id="alarm-volume" class="player-volume">
+                    <i class="fa fa-volume-down"></i>
+                    <div class="volume"></div>
+                    <i class="fa fa-volume-up"></i>
+                    <div class="volume-val">0%</div>
+                </div>
+            </div>
+
+            <div class="sound-type">
+                <div>
+                    <label for="long-sound">Long Sound </label>
+                    <input type="text" id="long-sound"/>
+                </div>
+
+                <div id="long-volume" class="player-volume">
+                    <i class="fa fa-volume-down"></i>
+                    <div class="volume"></div>
+                    <i class="fa fa-volume-up"></i>
+                    <div class="volume-val">0%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="oopsyraid">
+        <h1>OopsyRaid</h1>
+
+        <div class="not-done">
+            These settings are not yet completed.
+        </div>
+
+    </section>
+
+    <section id="jobs">
+        <h1>Jobs</h1>
+
+        <div class="not-done">
+            These settings are not yet completed.
+        </div>
+
+    </section>
+
+</div>
+
+<script src="settings.js"></script>
+</body>
+</html>
