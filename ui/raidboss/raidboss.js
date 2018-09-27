@@ -13,7 +13,6 @@ let Options = {
   SpokenAlertsEnabled: false,
   GroupSpokenAlertsEnabled: false,
 
-
   PlayerNicks: {},
 
   ShowTimerBarsAtSeconds: 30,
