@@ -12,9 +12,16 @@ $('.volume').slider({
 });
 
 
-function setVolume(myVolume) {
-  console.log(myVolume);
-}
+$('.slider').slider({
+  min: 0,
+  max: 20,
+  value: 0,
+  range: 'min',
+  slide: function(e, ui) {
+    setVolume(ui.value / 100);
+    $(e.target).siblings('.slider-val').text(ui.value + 'seconds');
+  },
+});
 
 
 $('h2').click((e) => {
@@ -23,8 +30,21 @@ $('h2').click((e) => {
   nextDiv.addClass('active');
 });
 
-
 $('.menu span').click((e) => {
-  $('#raidboss, #oopsyraid, #jobs').removeClass('active')
+  $('#raidboss, #oopsyraid, #jobs').removeClass('active');
   $('#' + e.target.innerHTML).addClass('active');
 });
+
+$('.hide-settings').click((e) => {
+  if ($('#cactbot-module').hasClass('hide'))
+    $('#cactbot-module').removeClass('hide');
+  else
+    $('#cactbot-module').addClass('hide');
+});
+
+
+// Volume set
+function setVolume(myVolume) {
+  // console.log(myVolume);
+}
+

@@ -1,8 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:500);
 body {
     font-family: Raleway;
-
+margin-top: 15px;
 }
+
+
+
+div::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+div::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+div::-webkit-scrollbar-thumb
+{
+    background-color: #000000;
+}
+
 
 h1 {
     text-align: center;
@@ -10,7 +30,7 @@ h1 {
     color: #FFF;
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4, h5, label {
     color: #fff;
 }
 
@@ -91,7 +111,7 @@ p a:hover {
     visibility: hidden;
     transform: scaleY(0);
     height: 0;
-    overflow-y: scroll;
+    overflow-y: auto;
     transform-origin: top;
     transition: all 0.45s ease-out;
 }
@@ -99,9 +119,23 @@ p a:hover {
     visibility: visible;
     transform: scaleY(1);
     transform-origin: top;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 500px;
     transition: all 0.45s ease-in;
+}
+
+.slider-bar {
+        width: 300px;
+    height: 50px;
+        position: relative;
+}
+
+.slider-bar div.slider-val {
+    position: absolute;
+    margin-right: -54px;
+    right: 0;
+    color: #666;
+    line-height: 3px;
 }
 
 .player-volume {
@@ -130,7 +164,7 @@ p a:hover {
     line-height: 3px;
 }
 
-.volume {
+.volume, .slider {
     position: absolute;
     left: 24px;
     margin: 0 auto;
@@ -139,7 +173,8 @@ p a:hover {
     background: #555;
     border-radius: 15px;
 }
-.volume .ui-slider-range-min {
+.volume .ui-slider-range-min,
+.slider .ui-slider-range-min {
     height: 5px;
     width: 300px;
     position: absolute;
@@ -148,7 +183,8 @@ p a:hover {
     border-radius: 10px;
     outline: none;
 }
-.volume .ui-slider-handle {
+.volume .ui-slider-handle,
+.slider .ui-slider-handle {
     width: 20px;
     height: 20px;
     border-radius: 20px;
@@ -158,6 +194,16 @@ p a:hover {
     margin-top: -8px;
     cursor: pointer;
     outline: none;
+}
+
+.slider {
+    margin-top: 20px;
+    width: 230px;
+}
+
+.slider-bar {
+    color: #ccc;
+    margin-bottom: 10px;
 }
 
 #alerts, #timeline, #alert-sounds {
@@ -191,6 +237,7 @@ p a:hover {
     padding: 3px;
     margin: 10px;
     width: 200%;
+    caret-color: #5729e9;
 }
 
 section input[type=checkbox] {
@@ -198,7 +245,6 @@ section input[type=checkbox] {
     position: relative;
     width: 70px;
     height: 35px;
-    margin: auto;
     -webkit-appearance: none;
 }
 section .check {
@@ -243,18 +289,35 @@ section .check:checked:before {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 #alerts label {
     color: #ccc;
     cursor: pointer;
     text-align: center;
-    padding: 20px;
 }
 #alerts div {
-    padding: 20px;
     min-width: calc(50% - 40px);
-    margin: auto;
+    padding: 10px;
+    margin: 0;
 }
 
+#timeline label {
+    padding: 10px;
+    float: left;
+}
+
+.hide-settings {
+    color: #ccc;
+    font-size: 2em;
+    text-align: center;
+    top: 0;
+    width: calc(100% - 20px);
+    position: absolute;
+    z-index: 100;
+}
+
+#cactbot-module.hide {
+    display: none;
+}
