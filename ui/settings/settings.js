@@ -25,8 +25,8 @@ $('.slider').slider({
 
 
 $('h2').click((e) => {
-  const nextDiv = $(e.target).next('div');
-  $('#cactbot-module section h2 + div').removeClass('active');
+  const nextDiv = $(e.target.parentNode).next('div');
+  $('#cactbot-module section .header + div').removeClass('active');
   nextDiv.addClass('active');
 });
 

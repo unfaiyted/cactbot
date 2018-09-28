@@ -45,13 +45,13 @@
 
     <section id="raidboss" class="active">
         <h1>RaidBoss</h1>
-        <h2>Timeline</h2>
-        <div id="timeline">
-            <div>
-                <label for="timeline-enabled">Enabled </label>
-                <input type="checkbox" id="timeline-enabled" class="check"/>
-            </div>
 
+        <div class="header">
+            <h2>Timeline</h2>
+            <input type="checkbox" id="timeline-enabled" class="check"/>
+        </div>
+
+        <div id="timeline">
             <div id="show-timer-bar-at-seconds" class="slider-bar">
                 <span class="label">Show timer bars before action</span>
                 <div class="slider" data-min="0" data-max="100"></div>
@@ -77,12 +77,13 @@
             </div>
 
         </div>
-        <h2>Alerts</h2>
+
+        <div class="header">
+            <h2>Alerts</h2>
+            <input type="checkbox" id="alerts-enabled" class="check"/>
+        </div>
+
         <div id="alerts">
-            <div>
-                <label for="alerts-enabled"><i class="fas fa-globe-americas"></i>  All Alerts </label>
-                <input type="checkbox" id="alerts-enabled" class="check"/>
-            </div>
             <div>
                 <label for="text-alerts-enabled"><i class="fas fa-align-center"></i> Text Alerts </label>
                 <input type="checkbox" id="text-alerts-enabled" class="check"/>
@@ -100,7 +101,11 @@
                 <input type="checkbox" id="group-alerts-enabled" class="check"/>
             </div>
         </div>
-        <h2>Sounds and Volumes</h2>
+
+        <div class="header">
+            <h2>Sounds and Volumes</h2>
+        </div>
+
         <div id="alerts-sounds">
             <div class="sound-type">
                 <div>
@@ -160,7 +165,10 @@
             </div>
         </div>
 
-        <h2>Player Nicknames</h2>
+        <div class="header">
+            <h2>Player Nicknames</h2>
+        </div>
+
         <div id="nicknames" class="active">
 
           <ul>

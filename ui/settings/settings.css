@@ -106,8 +106,9 @@ p a:hover {
 #cactbot-module section h2 {
     cursor: pointer;
     padding-left: 10px;
+    padding-bottom: 10px;
 }
-#cactbot-module section h2 + div {
+#cactbot-module section .header + div {
     visibility: hidden;
     transform: scaleY(0);
     height: 0;
@@ -115,17 +116,18 @@ p a:hover {
     transform-origin: top;
     transition: all 0.45s ease-out;
 }
-#cactbot-module section h2 + div.active {
+#cactbot-module section .header + div.active {
     visibility: visible;
     transform: scaleY(1);
     transform-origin: top;
     overflow-y: auto;
-    height: 500px;
+    height: 100%;
     transition: all 0.45s ease-in;
 }
 
 .slider-bar {
         width: 300px;
+    margin-top: 10px;
     height: 50px;
         position: relative;
 }
@@ -285,12 +287,18 @@ section .check:checked:before {
     left: 50%;
 }
 
+section .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
 #alerts {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    align-content: flex-start;
 }
 #alerts label {
     color: #ccc;
@@ -299,8 +307,9 @@ section .check:checked:before {
 }
 #alerts div {
     min-width: calc(50% - 40px);
-    padding: 10px;
+    padding: 15px;
     margin: 0;
+    max-height: 50px;
 }
 
 #timeline label {
@@ -310,12 +319,18 @@ section .check:checked:before {
 
 .hide-settings {
     color: #ccc;
-    font-size: 2em;
+    font-size: 1.6em;
     text-align: center;
-    top: 0;
+    top: 18px;
+    left: -220px;
     width: calc(100% - 20px);
     position: absolute;
     z-index: 100;
+    cursor: pointer;
+}
+
+.hide-settings:hover {
+    animation: pulsate 1s infinite;
 }
 
 #cactbot-module.hide {
