@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:500);
 body {
     font-family: Raleway;
-margin-top: 15px;
+    margin-top: 15px;
 }
 
 
@@ -206,7 +206,7 @@ p a:hover {
     margin-bottom: 10px;
 }
 
-#alerts, #timeline, #alert-sounds {
+#alerts, #timeline, #alert-sounds, #nicknames {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -320,4 +320,123 @@ section .check:checked:before {
 
 #cactbot-module.hide {
     display: none;
+}
+
+
+#nicknames .add-nickname {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px 0 0px;
+}
+
+#nicknames .input {
+    display: inline-block;
+    padding: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #ccc;
+    width: calc(50% - 50px);
+}
+
+#nicknames .input-btn {
+    background: #2ecc71;
+    border: 3px solid #2ecc71;
+    padding: 0;
+    margin-top: 5px;
+    display: inline-block;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    height: 16px;
+}
+
+#nicknames .input-btn i:hover {
+    transform: rotate(90deg);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+#nicknames .input-btn:hover {
+    animation: pulsate 1s infinite;
+}
+
+#nicknames input {
+    outline: none;
+    border: none;
+    display:block;
+    line-height: 1.2em;
+    font-size: 12px;
+    background: #ccc;
+
+}
+
+#nicknames label {
+    display: block;
+    font-size: 10px;
+    color: blue;
+    color: #2a2a2a;
+
+}
+
+#nicknames ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 0;
+}
+
+
+#nicknames li {
+    color: #ccc;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+
+    margin-left: 0;
+}
+
+#nicknames li span {
+    width: 33%;
+}
+
+#nicknames li span:before {
+    display: block;
+    position: absolute;
+    top: -4px;
+    color: #ccc;
+    font-size: 8px;
+
+}
+
+#nicknames li span:first-of-type:before {
+     content: "Name";
+
+ }
+
+#nicknames li i:hover {
+    animation: pulsate 1s infinite;
+    cursor: pointer;
+}
+
+#nicknames li span:before {
+    content: "Nickname"
+}
+
+
+/* Animations */
+@keyframes pulsate {
+    0%   {
+        transform: scale(1);
+    }
+    50%  {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

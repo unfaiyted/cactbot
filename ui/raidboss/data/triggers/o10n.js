@@ -49,6 +49,7 @@
           en: 'Go To Cardinals',
         };
       },
+      }
     },
     {
       id: 'O10N Vertical Spin 2',

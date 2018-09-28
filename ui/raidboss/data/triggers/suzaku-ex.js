@@ -33,6 +33,11 @@
           };
         }
       },
+      groupTTS: function(data, matches) {
+      return {
+            en: 'Buster on ' + data.ShortName(matches[1]),
+        }
+      }
     },
     {
       id: 'SuzEx Phantom Flurry',
@@ -53,6 +58,11 @@
             fr: 'tankbuster',
           };
         }
+      },
+      groupTTS: function(data, matches) {
+           return {
+            en: "tank buster"
+           };
       },
     },
     {
