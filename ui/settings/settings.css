@@ -107,6 +107,15 @@ p a:hover {
     cursor: pointer;
     padding-left: 10px;
     padding-bottom: 10px;
+    line-height: 6px;
+}
+
+#cactbot-module section h2.active {
+    /*cursor: pointer;*/
+    /*padding-left: 10px;*/
+    /*padding-bottom: 10px;*/
+    /*line-height: 6px;*/
+    color: #65c87a;
 }
 #cactbot-module section .header + div {
     visibility: hidden;
@@ -236,10 +245,13 @@ p a:hover {
     border-radius: 3px;
     background: #ccc;
     border: 0;
-    padding: 3px;
+    padding: 6px;
     margin: 10px;
     width: 200%;
-    caret-color: #5729e9;
+}
+
+#alerts-sounds .sound-type input[type=text]:focus {
+  background: #2ecc71;
 }
 
 section input[type=checkbox] {

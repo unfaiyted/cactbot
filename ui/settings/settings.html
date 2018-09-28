@@ -29,12 +29,13 @@
 <body>
 <div>
     <i class="far fa-eye hide-settings"></i>
+
 </div>
 <div id="cactbot-module">
     <header>
         <div>
 
-            <h3> Cactbot Settings Module </h3>
+            <h3> Cactbot Settings Module  <i class="fas fa-cog"></i> </h3>
             <div class="menu">
                 <span>raidboss</span>
                 <span>oopsyraid</span>
@@ -54,26 +55,26 @@
         <div id="timeline">
             <div id="show-timer-bar-at-seconds" class="slider-bar">
                 <span class="label">Show timer bars before action</span>
-                <div class="slider" data-min="0" data-max="100"></div>
+                <div class="slider" data-min="0" data-max="100" data-unit="second"></div>
                 <div class="slider-val">0 seconds</div>
             </div>
 
             <div id="keep-expired-timer-bars-for-seconds" class="slider-bar">
                 <span class="label">Keep expired bar for</span>
-                <div class="slider" data-min="0" data-max="20"></div>
+                <div class="slider" data-min="0" data-max="20" data-unit="second"></div>
                 <div class="slider-val">0 seconds</div>
             </div>
 
             <div id="bar-expires-seconds-soon" class="slider-bar">
                 <span class="label">Bar will expire soon indicator starts</span>
-                <div class="slider" data-min="0" data-max="20"></div>
+                <div class="slider" data-min="0" data-max="20" data-unit="second"></div>
                 <div class="slider-val">0 seconds</div>
             </div>
 
             <div id="max-number-of-timer-bars" class="slider-bar">
                 <span class="label">Max number of bars at once</span>
-                <div class="slider" data-min="1" data-max="15"></div>
-                <div class="slider-val">0%</div>
+                <div class="slider" data-min="1" data-max="15" data-unit="bar"></div>
+                <div class="slider-val">0 bars</div>
             </div>
 
         </div>
@@ -84,6 +85,11 @@
         </div>
 
         <div id="alerts">
+
+            <p>
+                Alerts involve both visual and sound based alerts.
+            </p>
+
             <div>
                 <label for="text-alerts-enabled"><i class="fas fa-align-center"></i> Text Alerts </label>
                 <input type="checkbox" id="text-alerts-enabled" class="check"/>
@@ -100,6 +106,17 @@
                 <label for="group-alerts-enabled"><i class="fas fa-users"></i> Group Spoken Alerts </label>
                 <input type="checkbox" id="group-alerts-enabled" class="check"/>
             </div>
+
+            <!--<dl>-->
+                <!--<dt>Text Alerts</dt>-->
+                <!--<dd>Displayed alerts in text on the screen.</dd>-->
+                <!--<dt>Sound Alerts</dt>-->
+                <!--<dd>Sound alerts using sound files.</dd>-->
+                <!--<dt>Spoken Alerts</dt>-->
+                <!--<dd>Text-to-Speech based alerts</dd>-->
+                <!--<dt>Group Spoken Alerts</dt>-->
+                <!--<dd>Group based TTS alerts streaming to multiple people.</dd>-->
+            <!--</dl>-->
         </div>
 
         <div class="header">
