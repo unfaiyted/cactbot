@@ -14,4 +14,3 @@ class SettingStorage {
     return JSON.parse(localStorage.getItem(this.storageName));
   }
 }
-

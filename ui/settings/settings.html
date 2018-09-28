@@ -29,7 +29,6 @@
 <body>
 <div>
     <i class="far fa-eye hide-settings"></i>
-
 </div>
 <div id="cactbot-module">
     <header>
@@ -73,7 +72,7 @@
 
             <div id="max-number-of-timer-bars" class="slider-bar">
                 <span class="label">Max number of bars at once</span>
-                <div class="slider" data-min="1" data-max="15" data-unit="bar"></div>
+                <div class="slider" data-min="1" data-max="10" data-unit="bar"></div>
                 <div class="slider-val">0 bars</div>
             </div>
 
@@ -106,6 +105,10 @@
                 <label for="group-alerts-enabled"><i class="fas fa-users"></i> Group Spoken Alerts </label>
                 <input type="checkbox" id="group-alerts-enabled" class="check"/>
             </div>
+
+            <p>
+                Group spoken alerts take priority over spoken alerts if they exist.
+            </p>
 
             <!--<dl>-->
                 <!--<dt>Text Alerts</dt>-->
