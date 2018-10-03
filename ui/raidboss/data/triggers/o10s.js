@@ -16,9 +16,25 @@
     {
       id: 'O10S Ice Positioning',
       regex: /Northern Cross/,
-      beforeSeconds: 5,
+      beforeSeconds: 7,
       alertText: {
         en: 'position for ice',
+      },
+    },
+    {
+      id: 'O10S Ice Positioning-Earthshaker',
+      regex: /Northern Cross-Earth/,
+      beforeSeconds: 13,
+      alertText: {
+        en: 'Earthshakers',
+      },
+    },
+    {
+      id: 'O10S Ice Positioning-Thunders',
+      regex: /Northern Cross-Thunder/,
+      beforeSeconds: 13,
+      alertText: {
+        en: 'Thunderstorm',
       },
     },
     {
@@ -105,14 +121,15 @@
     },
     {
       id: '010S Time Immemorial - Tracker',
-      regex: /:32EF:/,
-      run: function(data, matches) {
+      regex: /00:282b:Midgardsormr readies Time Immemorial/,
+      preRun: function(data, matches) {
       // Boss Locations
-      // Phase 1 - Flying (first cast)
-      // Phase 2 - Adds  (no cast)
-      // Phase 3 - Grounded (cast)
-      // Phase 4  - Flying (cast, cast)
+        // Cast 1 - Flying (first cast)
+        // Cast 2 - Ground
+        // Cast 3 - flying
+        // cast 4 - flying
         data.memorialCounter = (data.memorialCounter || 0) + 1;
+        data.bossStatus = (data.memorialCounter === 2) ? 'flying' : 'ground';
       },
       infoText: {
         en: 'Potential Tank Swap',
@@ -131,8 +148,7 @@
         data.hasAboveBuff = false;
         data.deathBelowText = 'get flying ';
 
-        // boss is on ground
-        // if (data.memorialCounter === 1)
+        // if (data.bossStatus === 'flying')
         //   data.deathBelowText = 'get boss ';
       },
       infoText: {
@@ -154,8 +170,7 @@
         data.hasAboveBuff = true;
         data.deathAboveText = 'get grounded ';
 
-        // // boss is flying at this points
-        // if (data.memorialCounter === 0 || data.memorialCounter === 2 || data.memorialCounter === 3)
+        // if (data.bossStatus === 'ground')
         //   data.deathAboveText = 'get boss ';
       },
       infoText: function(data, matches) {

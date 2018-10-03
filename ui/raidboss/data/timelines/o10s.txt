@@ -158,8 +158,8 @@ hideall "--sync--"
 553.6 "Shaker/Thunder"
 
 ## Branch A2: Spin->Earthshaker
-1536.8 "Spin" sync /:Midgardsormr:31AC:/
-1545.9 "Northern Cross" sync /:Midgardsormr:3625:/
+1536.8 "Spin-Earth" sync /:Midgardsormr:31AC:/
+1545.9 "Northern Cross-Earth" sync /:Midgardsormr:3625:/
 1550.1 "Spin/Flip" sync /:Midgardsormr:31AE:/
 1553.6 "In/Out" sync /:Midgardsormr:31B(2|4):/
 1553.6 "Earth Shaker" sync /:Midgardsormr:31B6:/
@@ -170,7 +170,7 @@ hideall "--sync--"
 
 ## Branch B2: Flip->Thunderstorm
 2536.8 "Flip" sync /:Midgardsormr:31AD:/
-2545.9 "Northern Cross" sync /:Midgardsormr:3625:/
+2545.9 "Northern Cross-Thunder" sync /:Midgardsormr:3625:/
 2550.1 "Spin/Flip" sync /:Midgardsormr:31AE:/
 2553.6 "Corners/Cardinals" sync /:Midgardsormr:31B(3|5):/
 2555.1 "Thunderstorm" sync /:Midgardsormr:31B8:/

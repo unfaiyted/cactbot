@@ -29,14 +29,14 @@
       alertText: function(data) {
         if (data.role == 'tank' || data.role == 'healer') {
           return {
-            en: 'Spread (Tanks/Healers)',
+            en: 'Spread (Tanks and Healers)',
           };
         }
       },
       infoText: function(data) {
         if (data.role != 'tank' && data.role != 'healer') {
           return {
-            en: 'Hide Middle',
+            en: '',
           };
         }
       },
@@ -55,7 +55,7 @@
       infoText: function(data) {
         if (data.role == 'tank' || data.role == 'healer') {
           return {
-            en: 'Hide Middle',
+            en: 'Spread DPS',
           };
         }
       },
